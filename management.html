@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+
+        background-size: cover;
+      }
+      .logInput {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      #loginbuttons {
+        display: flex;
+        flex-direction: row;
+        gap: 110px;
+      }
+      #login {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin: 0 20px;
+        border: 2px solid black;
+        padding: 60px;
+        padding-top: 100px;
+        border-radius: 12px;
+        max-width: 600px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(2px);
+      }
+      input {
+        height: 30px;
+        width: 210px;
+        background-color: rgba(0, 0, 255, 0);
+        color: aliceblue;
+        outline: none;
+        border: none;
+        border-bottom: 3px solid white;
+      }
+      #sign {
+        margin-left: auto;
+      }
+      img {
+        max-width: 700px;
+      }
+       
+      button {
+        padding: 10px 20px;
+        background-color: #3498db; /* Change the color to your preference */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+    </style>
+  </head>
+  <body background="Screenshot 2024-01-30 155926.png">
+    <form id="entry">
+      <div id="login">
+        <div class="logInput">
+          <input type="email" placeholder="Enter your email"name="Email" />
+          <input type="password" placeholder="Enter your password" name="Password" />
+        </div>
+        <br />
+        <div id="loginbuttons">
+          <button type="submit">Login</button>
+          <button>SignUp</button>
+        </div>
+      </div>
+    </form>
+
+    <script>
+        let ajaxRequest;
+    function ajacfunc(){
+      try{
+        ajaxRequest=new XMLHttpRequest();
+      }catch(e){
+        try{
+          ajaxRequest=new ActiveXObject("Msxml2.XMLHTTP");
+        }catch(e){
+          try{
+            ajaxRequest=new ActiveXObject("Microsoft.XMLHTTP");
+          }catch(e){
+            alert("Your browser is down");
+            return false;
+          }
+        }
+      }
+    }
+
+    document.getElementById("entry").addEventListener("submit",(e)=>{
+      e.preventDefault();
+      ajacfunc();
+      //console.log("Clicked");
+      let  formEle =document.querySelector("#entry");
+      let  data=new FormData(formEle);
+      ajaxRequest.onreadystatechange=function(){
+        if(ajaxRequest.readyState==4 && ajaxRequest.status==201){
+          
+          console.log("Message successful");
+        }else{
+          console.log("Error occured");
+        }
+      }
+      ajaxRequest.open("POST","https://jsonplaceholder.typicode.com/posts",true);
+      ajaxRequest.send(data);
+      
+    });
+
+ 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b2733f9d88.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="lisence.css">
+    <title>Lisence</title>
+</head>
+<body>
+    <div class="container">
+        <aside>
+        <div class="close" id="close-btn">
+            <span><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="sidebar">
+            <a href="#">
+                <span><i class="fa fa-plus" style="font-size:24px"></i></span>
+                <h3>Add a lisence</h3>
+            </a>
+            <a href="#">
+                <span><i class='far fa-eye' style='font-size:24px'></i></span>
+                <h3>View licences</h3>
+            </a>
+            <a href="managementpg2.html">
+                <span><i class="fa fa-home" style="font-size:24px"></i></span>
+                <h3>Home</h3>
+            </a>
+            <a href="#">
+                <span><i class="fas fa-clock" style="font-size: 24px"></i></span>
+                <h3>History</h3>
+            </a>
+        </div>
+        </aside>
+        <!--End of sidebar-->
+        <!--Main content -->
+        <main>
+            <h1>Names </h1>
+            <div class="info">
+                <div class="names">
+                    <div class="first-name">
+                       <input type="text" required>
+                       <h3>First name</h3>
+                    </div>
+                    <div class="Second-name">
+                        <input type="text" required>
+                        <h3>Second name </h3>
+                    </div>
+                    <div class="last-name">
+                        <input type="text">
+                        <h3>Field</h3>
+                    </div>
+                </div>
+                <!--End of names-->
+            </div>
+            <!--Licence details-->
+            <h1>Lisence details</h1>
+            <div class="details">
+                 
+                <div class="more">
+                    <div class="license-number">
+                        <input type="number" required>
+                        <h3>Lisence number</h3>
+                     </div>
+                     <div class="award-date">
+                         <input type="date" required>
+                         <h3>Award date</h3>
+                     </div>
+                     <div class="expiry-date">
+                         <input type="date" required>
+                         <h3>Expiry date</h3>
+                     </div>
+                </div>
+
+            </div>
+            <!--End of details-->
+             
+            <div class="image">
+                <div class="l-image">
+                    <div class="licence-image">
+                        <input type="file" id="uploadBtn">
+                        <label for="uploadBtn"><i class="fa fa-cloud-upload" style="font-size:20px"></i>Upload Lisence</label>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="right-section">
+        <button id="menu-btn">
+            <span class='fas fa-bars' style='font-size:24px'>
+            </span>
+        </button>
+        <div class="dark-mode">
+            <span class='fas fa-sun active ' style='font-size:17px'>
+            </span>
+            <span class='fas fa-moon ' style='font-size:17px'>
+            </span>
+        </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    
+   </div>
+   <script src="lisence.js"></script>
+</body>
+</html>

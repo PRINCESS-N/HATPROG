@@ -1,0 +1,311 @@
+:root{
+    --color-primary:#6C9BCF;
+    --color-danger:rgb(0,0,255,0.6);
+    --color-success: #1B9C85;
+    --color-warning:#F7D060;
+    --color-white:#fff;
+    --color-info-dark:#7d8da1;
+    --color-dark:#363949;
+    --color-light: rgba(132,139,200,0.18);
+    --color-dark-variant:#677483;
+    --color-background:#f6f6f9;
+
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+.dark-mode-variable{
+    --color-background:#181a1e;
+    --color-white:#202528;
+    --color-dark:#edeffd;
+    --color-dark-variant:#a3bdcc;
+    --color-light: rgba(0,0,0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+*{
+    margin:0;
+    padding:0;
+    outline:0;
+    appearance:0;
+    border:0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    font-size:14px;
+     
+}
+body{
+    width:100vw;
+    height:100vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.8rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+a{
+    color:var(--color-dark);
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+  font-weight: 600;
+  font-size: 1.4rem;  
+}
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+aside{
+    height:300px;
+}
+aside a{
+    display:flex;
+    align-items: center;
+    
+}
+.container{
+    display:grid;
+    width:96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+    
+}
+aside .sidebar {
+    display:flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    position:relative;
+    height:88vh;
+    cursor:pointer;
+    transition: all 0.3s ease;
+
+}
+aside .close{
+     margin-left: 155px;
+     display: none;
+    
+}
+aside .sidebar:hover{
+    box-shadow: none;
+}
+aside .sidebar a{
+    padding-bottom: 50px;
+    
+    color:var(--color-info-dark);
+    display:flex;
+    align-items: center;
+    height:3.7rem;
+    gap: 1rem;
+    position:relative;
+    transition: all 0.3s ease;
+    
+}
+aside .sidebar a:last-child{
+    position:absolute;
+    bottom: 1%;
+    width:100%;
+}
+aside .sidebar a:hover{
+    color:var(--color-primary);
+}
+aside .sidebar a:hover span{
+    margin-left: 0.6rem;
+}
+aside .sidebar a span{
+    transition: all 0.3s ease;
+}
+main .info .names {
+    margin-top: 2rem;
+    display: flex;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    position:relative;
+    height:25vh;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    align-items: center;
+    border-radius: var(--border-radius-2);
+    padding-left: 20px;
+    padding-right: 20px;
+     
+
+}
+
+main .info .names input {
+    margin-right: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: var(--border-radius-1);
+    height:25px;
+}
+main .info .names h3{
+    text-align: center;
+}
+
+main .info{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap:1.6rem;
+}
+main .info .names:hover{
+    box-shadow: none;
+
+}
+main .details{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1.6rem;
+}
+main .details .more input {
+    margin-right: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: var(--border-radius-1);
+    height:25px;
+}
+main .details .more {
+    margin-top: 2rem;
+    display: flex;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    position:relative;
+    height:25vh;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    align-items: center;
+    border-radius: var(--border-radius-2);
+    padding-left: 20px;
+    padding-right: 20px;
+     
+
+}
+main .details .more{
+    text-align: center;
+
+}
+main .details .more:hover{
+    box-shadow: none;
+}
+main .details .more input{
+    padding-right: 55px;
+}
+h1{
+    margin-top:20px;
+}
+input[type="file"]{
+    display:none;
+}
+ 
+label i{
+    font-size:20px;
+    margin-right: 10px;
+}
+ 
+main .image .l-image{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+ 
+label{
+cursor:pointer;
+padding-left: 20px;
+padding-right: 20px;
+color:--color-dark;
+text-transform: uppercase;
+font-size: 10px;
+letter-spacing: 1.5px;
+user-select: none;
+background-color: var(--color-white);
+border-radius: var(--border-radius-2);
+ 
+
+}
+ 
+main .image{
+    background-color: var(--color-white);
+    margin-top: 15px;
+    height:14vh;
+    padding-top: 30px;
+    padding-left: 90px;
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    width:565px;
+    border: 2px dashed var(--color-primary); 
+    
+    
+}
+main .image:hover{
+    box-shadow:none;   
+}
+main .image .l-image .licence-image{
+    width:200px;
+    
+     
+    
+}
+main .image .l-image .licence-image i{
+    display: inline;
+    align-items:center;
+}
+.right-section .dark-mode{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:1.6rem;
+    width:99px;
+    cursor:pointer;
+    border-radius: var(--border-radius-1);
+
+}
+.right-section .dark-mode span{
+    font-size:1.2rem;
+    width:50%;
+    height:100%;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+.right-section .dark-mode span.active{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+
+}
+.right-section button span{
+    display: none;
+}
+.details .more .license-number input{
+    width:165px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ 
+ 
+
+ 

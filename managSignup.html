@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: black;
+        background-size: cover;
+
+    }
+     #SignUp{
+         position:relative;
+         width:400px;
+         height:450px;
+         background:transparent;
+         border-radius: 20px;
+         display: flex;
+         justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        border:2px solid rgba(255,255,255, .5);
+        backdrop-filter : blur(15px);
+        
+    
+          
+
+    
+        
+     }
+
+     #email{
+        padding-top:30px;
+        width:310px;
+        color:aliceblue;
+
+        
+     }
+     #password{
+        padding-top:30px;
+        width:310px;
+        color:aliceblue;
+        
+        
+     }
+     
+     #button{
+        padding-top: 30px;
+     }
+     
+     #design{
+        height:600px;
+     }
+     h1{
+        color:aliceblue;
+        margin-left:0px;
+     }
+      input{
+        width:100%;
+        height:35px;
+        outline:none;
+        border: none;
+        background: transparent;
+        border-bottom: 3px solid white;
+        padding:5px;
+        color:aliceblue;
+    
+         
+     }
+     .Names{
+        width:310px;
+        color:aliceblue;
+     }
+     .Names label {
+    position: relative;
+    top: 5px; /* Adjust the initial position as needed */
+    transition: top 0.3s ease; /* Add a transition for a smooth effect */
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+}
+     
+     button{
+        width:300px;
+        height:40px;
+        border-radius: 40px;
+        cursor:pointer;
+        font-size:1em;
+        font-weight: 500;
+        border:none;
+        outline: none;
+     }
+     #secNm{
+        margin-top: 12px;
+     }
+     
+     
+</style>
+</head>
+<body background="rsz_signup_image.jpg">
+    <div class="row">
+     
+
+    <div id="SignUp" class="grid">
+        <h1>Sign Up</h1>
+        <div class="Names">
+        <label >FirstName</label>
+        <input id="frstNm" type="text">
+        <div id="secNm">
+        <label >SecondName</label>
+        <input   type="text">
+        </div>
+         
+        </div>
+        <div id="email">
+            <label>Email</label>
+            <input class="input" type=" email"  >
+            
+        </div>
+        <div id="password">
+            <label>Password</label>
+            <input type="password" class="input"  >
+             
+        </div>
+        <div id="button">
+            <button type="submit">SignUp</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
