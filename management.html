@@ -81,45 +81,6 @@
       </div>
     </form>
 
-    <script>
-        let ajaxRequest;
-    function ajacfunc(){
-      try{
-        ajaxRequest=new XMLHttpRequest();
-      }catch(e){
-        try{
-          ajaxRequest=new ActiveXObject("Msxml2.XMLHTTP");
-        }catch(e){
-          try{
-            ajaxRequest=new ActiveXObject("Microsoft.XMLHTTP");
-          }catch(e){
-            alert("Your browser is down");
-            return false;
-          }
-        }
-      }
-    }
-
-    document.getElementById("entry").addEventListener("submit",(e)=>{
-      e.preventDefault();
-      ajacfunc();
-      //console.log("Clicked");
-      let  formEle =document.querySelector("#entry");
-      let  data=new FormData(formEle);
-      ajaxRequest.onreadystatechange=function(){
-        if(ajaxRequest.readyState==4 && ajaxRequest.status==201){
-          
-          console.log("Message successful");
-        }else{
-          console.log("Error occured");
-        }
-      }
-      ajaxRequest.open("POST","https://jsonplaceholder.typicode.com/posts",true);
-      ajaxRequest.send(data);
-      
-    });
-
- 
-    </script>
+     
   </body>
 </html>
